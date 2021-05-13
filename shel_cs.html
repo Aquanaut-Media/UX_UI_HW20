@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Grant Ertl's UX/UI + Visual Design Resume</title>
+        <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
         <link rel="lightBox stylesheet" href="css/lightbox.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-        <body>
+        <body data-spy="scroll" data-target=".navbar" data-offset="50">
             <header>
                 <div class="inline-block">
                     <div class= logo>
@@ -75,8 +78,46 @@ function closeNav() {
   document.getElementById("mobileNav").style.width = "0";
 }
 </script>
-<!-- mobile Nav --> 
-        <section class="heroCaseStudy">
+<!-- mobile Nav end--> 
+
+
+
+
+    <section class="heroCaseStudy">
+                <!--Bootstrap Collapsing CaseStudy Menu-->
+                <nav class="CS-menu">
+                    <p>
+                        <a class="CS-menuCollapse" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><div class="CS-menuContainer">
+                        Navigation
+                        <img src="/image/shelCS/down-arrow.png" width="20px" height="10px">
+                        </div>
+                        </a>
+                        
+                      </p>
+                      <div class="collapse" id="collapseExample">
+
+                        
+                <!--Bootstrap Scrollspy-->
+                        <div class="card card-body">
+                            <div id="floatingNav list-example" class="list-group">
+                                <a class="list-group-item list-group-item-action" href="#list-item-1">Overview</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-2">Phase 1: Research</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-3">Phase 2: Definition</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-4">Phase 3: Ideation</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-5">Phase 4: Prototype</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-6">Phase 5: User Testing</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-7">Phase 6: Conclusion</a>
+                            <!---<a href="#">Phase 1: Research</a>
+                            <a href="#">Phase 2: Definition</a>
+                            <a href="#">Phase 3: Ideation</a>
+                            <a href="#">Phase 4: Prototype</a>
+                            <a href="#">Phase 5: Testing + Outcomes</a>--->
+                            </div>
+                      </div>
+                    
+
+                </nav>
+                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                 <div class="CS-mobileCover">
                 <h1>SHËL - Skincare Routine Builder</h1>
                 <h5 class="casestudySubtitle">UX/UI Design Case Study</h5>
@@ -84,7 +125,7 @@ function closeNav() {
                     <img src="/image/shelCS/shel_cover.png" alt="Shel Cover Image"> 
                 </div>
                 </div>
-
+                <!--Bootstrap Jumbotron-->
                 <div class="jumbotron jumbotron-fluid">
                     <div class="shel-container">
                       <h1 class="display-4">SHËLL - Skincare Routine Builder</h1>
@@ -94,7 +135,7 @@ function closeNav() {
                 
                 <div class="casestudyOverview">
                     <div class="overview-left">
-                    <h4>Overview</h4>
+                    <h4 id="list-item-1">Overview</h4>
                     <p>Maintaining an effective skincare routine while avoiding hazardous ingredients can be challenging. Shël enables users to build skincare routines, check ingredients, read reviews, and connect with other product users to make clear and radiant skin as accessible as possible.</p>
                     <p>
                     This was a three-person group project. My partners Parinaz Kassemi and Rachel Purtell. Believe it or not, the idea to do an app focused on women’s beauty products was mostly their idea. At the time I felt like I just needed a break from travel apps.  I definitely learned a lot about skincare while doing this project.
@@ -122,7 +163,7 @@ function closeNav() {
                         <li>UI Designer</li>
                     </ul>
                     <h4>Timeline</h4>
-                    <ul>
+                    <ul class="timeline">
                         <li>One week of heuristic analysis and usability testing</li>
                         <li>One week of navigation redesign</li>
                         <li>Two weeks of prototyping and visual design</li>
@@ -131,7 +172,7 @@ function closeNav() {
                 </div>
                 <hr>
                 <div class="phase1">
-                    <h2>PHASE 1: Research</h2>
+                    <h2 id="list-item-2">PHASE 1: Research</h2>
                     <h4>Proto Persona</h4>
 
                     <a href="image/shelCS/Shel_Protopersona.jpg" data-lightbox="image-1" data-title="Shël Proto Persona"><img src="/image/shelCS/Shel_Protopersona.jpg" width="100%" height="100%"></a>
@@ -159,24 +200,224 @@ function closeNav() {
                     </ul>
                     
                     <h4>User Data Analysis</h4>
-                    <div id="userData-container">
+                <div id="userData-container">
                     <div id="userData-left">
                     <p>Once we finished seven interviews we assorted our data as stick notes in Miro. What with the Pandemic going on we weren’t able to do any of this project in person, unfortunately. Once we had all our insights in one place we sorted those findings into an affinity diagram that gave us a better idea of what our user’s concerns were. The categories we created included budget, insights on user’s views of ingredients, thoughts on a theoretical skincare app, and skincare concerns. </p>
                     </div>
+                    
                     <div id="userData-right">
                     <a href="image/shelCS/shel_insights.jpg" data-lightbox="image-1" data-title="Shël User Insights"><img src="/image/shelCS/shel_insights.jpg" width="100%" height="100%"></a>
                     </div>
-                    </div>
+                </div>
                     <div id="affinityDiagram">
                     <a href="image/shelCS/shel_affinitydiagram.jpg" data-lightbox="image-1" data-title="Shël User Insights"><img src="/image/shelCS/shel_affinitydiagram.jpg" width="100%" height="100%"></a>
                     </div>
 
-                 
-
+                </div class="empathyMap">
+                    <div id="empathyMap-p">
+                        <h4>Empathy Map</h4>
+                    <p>Now that we had an overview of what our user looks like we were able to create an empathy map. This would give us a clearer idea of the user we were designing for and let us better understand how to meet their needs when designing our app. Through the interview process, I learned how personal skincare can be so it was really pivotal that we have a very real person in mind that we could envision using this application.</p>
+                    </div>
+                    <div id="empathyMap-image">
+                        <a href="image/shelCS/Empathy_Map.jpg" data-lightbox="image-1" data-title="Shël User Insights"><img src="/image/shelCS/Empathy_Map.jpg" width="100%" height="100%" alt="Shel Empathy Map"></a>
+                    </div>
                 </div>
+                <hr>
+            </div>
                 
-            </section>
-            
+                    <div class="phase2">
+                        <img src="/image/shelCS/Shel_leaf_circle.png" width="40%" height="40%" alt="Shel Definition Accent Image Woman Behind Leaf">
+                    <div class="phase2-copy">
+                        <h2 id="list-item-3">PHASE 2: Definition</h2>
+                        <p>What does Molly need and how can we help?</p>
+                        <h4>User Insight</h4>
+                        <p>Molly is a junior art director at a museum who lives a busy life. Her work requires her to travel often which leads to fluctuations in her routine. The results of her inconsistent lifestyle are beginning to have a negative impact on her skin.</p>
+                        <h4>Problem Statement</h4>
+                        <p>Using the 4 Ws: “ <b>Molly, a young professional and skincare enthusiast, has the problem that travel and the stress of her busy career interfere with her pursuit of clear skin. She strives to develop better habits and seeks assistance in finding what would work best for her when she doesn't have the time to do more in-depth analysis and can't stick to an effective routine due to work and travel.</b> Our solution should deliver <b>personalized recommendations and direction for building a successful long-lasting routine with the most compatible products.”</b></p>
+                        </div>
+                    </div>
+                <hr>
+                    <div class="phase3">
+                        <div class="phase3-copy">
+                            <h2 id="list-item-4">PHASE 3: Ideation</h2>
+                            <h4>“I Like, I Wish, What If” Method</h4>
+                            <p>Examples of things we <b>Like:</b></p>
+                            <ul>
+                                <li>Knowing what products work best for me</li>
+                                <li>Understanding which products do/don't work well with each other</li>
+                                <li>Getting recommendations based on price category</li>
+                            </ul>
+                            <p>Examples of things we <b>Wish:</b></p>
+                            <ul>
+                                <li>I wish I could remember to moisturize before I start looking like a crocodile</li>
+                                <li>I wish I didn't have to spend so much time researching the best products for my skin</li>
+                                <li>I wish I had more guidance on a helpful skincare routine when I was younger</li>
+                            </ul>
+                            <p>Examples of ideas we had when we asked <b>What if?</b></p>
+                            <ul>
+                                <li>What if an app could help me build confidence</li>
+                                <li>What if we could use lasers mounted to satellites to vanquish blemishes from space (no bad ideas!)</li>
+                                <li>My phone could give me light healing therapy</li>
+                            </ul>
+                        </div>
+                            <a href="image/shelCS/Shel_brainstorming.jpg" data-lightbox="image-1" data-title="Shël Brainstorming">
+                            <img src="image/shelCS/Shel_brainstorming.jpg" height="100%" width ="100%" alt="Shel brainstorming"><a>
+                            <h4>Feature Prioritization Matrix</h4>
+                            <p>After we had a good assortment of ideas, we asked ourselves which of these Molly would view as the most useful and which we think would be the most achievable. Some of the focus features we wanted to create were:</p>
+                            <ul>
+                                <li>The ability to read reviews</li>
+                                <li>The ability to recommend products based on skin type</li>
+                                <li>The ability to build and track your personal skincare routine</li>
+                                <li>Ability to recommend products based on weather conditions</li>
+                            </ul>
+                            <a href="image/shelCS/FeaturePrioritizationMatrix.jpg" data-lightbox="image-1" data-title="Shël Prioritization Matrix">
+                            <img src="image/shelCS/FeaturePrioritizationMatrix.jpg" height="100%" width ="100%" alt="shel Prioritization Matrix"></a>
+                            <h4>Storyboard</h4>
+                            <p>Now that we had an idea of the features we were going to try to implement we could start to consider how these would work for our user. We created a Storyboard to visualize exactly what value Shël could bring to a user.</p>
+                            <a href="image/shelCS/Shel_Storyboard.jpg" data-lightbox="image-1" data-title="Shël Storyboard">
+                            <img src="image/shelCS/Shel_Storyboard.jpg" height="100%" width ="100%" alt="Shel storyboard"></a>
+                    </div>
+                <hr>
+                    <div class="phase4">
+                        <h2 id="list-item-5">PHASE 4: Prototype</h2>
+                        <h4>Competitor Analysis</h4>
+                        <p>I specifically looked at an app called <b>Think Dirty</b>. It lets users scan barcodes to check ingredients and read reviews. We also looked at a routine building app called <b>Fabulous</b> as an indirect competitor. The Think Dirty app had probably the coolest feature; users can scan barcodes on items and get information about the ingredients as well as reviews from other users. Fabulous had the coolest-looking interface. I didn’t get too far into using Fabulous, but I loved all the illustrations. It definitely gor me thinking about how I could make Shël’s have a warm organic look and feel.</p>
+                       <div class="competitor-wrapper">
+                           <img src="/image/shelCS/fabulous_competitionanalysis.png" width="25%" height="25%" alt="Fabulous app competitor analysis screenshot">
+                        <div class="competitor-copy">
+                           <h6>Fabulous</h6>
+                           <p>The illustrations in this app are absolutely gorgeous. They do a really good job of visualizing the journey of self-improvement.</p>
+                        </div>
+                            <img src="/image/shelCS/thinkdirty_competitionanalysis.png" width="27%" height="27%" alt="Think Dirty app competitor analysis screenshot">
+                            <div class="competitor-copy">
+                            <h6>Think Dirty</h6>
+                            <p>This is a coaching screen showing users how to scan products to get more information.</p>
+                        </div>
+                       </div>
+                       <br>
+                       <p><b>Strengths of competitor apps:</b></p>
+                       <p><b>Think Dirty:</b></p>
+                       <ul>
+                           <li>Excellent UI, great features, fun animations, lots of information to dig in and explore</li>
+                       </ul>
+                       <p><b>FeelinMySkin:</b></p>
+                       <ul>
+                           <li>Keeps users coming back by doing "tip/term of the day"</li>
+                       </ul>
+                       <p><b>Fabulous:</b></p>
+                       <ul>
+                           <li>Great UI, plenty of pre-set habits already set, music plays along when the app opens</li>
+                       </ul>
+                       <div class="CS-centered"><a href="https://drive.google.com/file/d/1bh68jx2DUkAVHDPGNAigIUB_8vmPIX2A/view?usp=sharing" target="_blank"><button>the full analysis</button></a></div>
+                      
+                        <h4>User Flow Diagram (First Version)</h4>
+                        <p>We were now capable of creating the user’s roadmap for this app. This would become the foundation on which we would build the Shël app. At this point, I had a pretty good idea of what we wanted to build for our users so I took the lead on building a User Flow. I used specific colors to indicate the main areas of the app: onboarding, routine, profile, and search. </p>
+                        <img src="/image/shelCS/Shel_userflow.jpg" width="100%" height="100%" alt="Shel Empathy Map">
+                        <h4>Paper Wireframes</h4>
+                        <p>We each sketched out our ideas for the pages of the design of the app. We ended up using my sketches to build the paper prototype in InVision, but we made sure to include ideas from both Parinaz and Rachel’s wireframes.</p>
+                        <p>There were some disagreements over the design, but we figured that testing would hopefully allow us to weed out some issues. We didn’t have a clear idea of the main screen at this point. I designed a sort of news feed layout with a bunch of tiles. </p>
+                        <div id="paperWireframes-gallery">
+                             <!--Bootstrap Carousel-->
+                    <div class="CS-centered-Gallery">
+                        <a href="image/shelCS/paperWireframes/01_LoginScreen@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 1">
+                        <img src="/image/shelCS/paperWireframes/01_LoginScreen@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/04_Profile@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                        <img src="/image/shelCS/paperWireframes/04_Profile@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/05_GPSAuthorization@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 3">
+                        <img src="/image/shelCS/paperWireframes/05_GPSAuthorization@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/08_MorningRoutine@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 4">
+                        <img src="/image/shelCS/paperWireframes/08_MorningRoutine@72x.png" width="80%"></a>
+                        </div>
+                        <br>
+                    <div class="CS-centered-Gallery">
+                        <a href="image/shelCS/paperWireframes/09_Edit ProductinRoutine@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                        <img src="/image/shelCS/paperWireframes/09_Edit ProductinRoutine@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/12_ProductSpotlight@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                        <img src="/image/shelCS/paperWireframes/12_ProductSpotlight@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/13_WatchList@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                        <img src="/image/shelCS/paperWireframes/13_WatchList@72x.png" width="80%"></a>
+
+                        <a href="image/shelCS/paperWireframes/15_FeaturedVideo@72x.png" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                        <img src="/image/shelCS/paperWireframes/15_FeaturedVideo@72x.png" width="80%"></a>
+                    </div>
+                        <br>
+                        </div>
+                        <h4>Paper Prototype</h4>
+                        <p>The first prototype had quite a few issues. Users could figure out how to search for products and add them to their drop list, but adding products to a routine wasn’t really clicking. Another major issue was people couldn’t figure out how to check off their routine. We decided the profile, main page, and routine were what we really needed to focus on. To get a better idea of how to improve on this for our mid-fidelity wireframes, we iterated on our user flow diagram.</p>
+                            <div class="CS-centered"><a href="https://grantjertl216232.invisionapp.com/console/share/U425FRP668/509564034" target="_blank"><button>Functioning Invision Prototype</button></a></div>
+                        
+                            <h4>User Flow Diagram (Second Version)</h4>
+                            <p>Based on the tests of the paper prototype, we decided it would be best to combine the <b>routine</b> and <b>profile</b> sections. This would make the app’s personalized features more centralized. Additionally, we determined the best configuration for the main page’s design would be a screen that lets you verify that you completed your routines. I imagine this would feature could also be completed with a phone notification as well since it might not be convenient to always open the app.</p>
+    
+                            <p>This new user flow made the goals of the user much more straightforward and allowed us to be more on the same page with the design of the app. We felt a lot better about making the digital wireframes than we did making the paper ones.</p>
+
+                            <a href="image/shelCS/shel_userflow2.jpg" data-lightbox="image-1" data-title="Paper Prototype Example 2">
+                                <img src="/image/shelCS/shel_userflow2.jpg" width="100%" height="100%"></a>
+
+                        <h4>Digital Wireframes</h4>
+                        <p>After creating Avalanche I had a pretty good idea of how I could improve on my process of designing in Figma. I wanted to test a design that had a lot of organic curves and few straight lines. When we first opened the creation tool, Parinaz used a blob creation tool to make a big blob vector on the frame. I just went with that and tried to make every page have at least a few soft contours and an organic feel. </p>
+
+                        <!--DIGITAL WIREFRAMES PLACEHOLDER-->
+
+                        <h4>Mid-Fidelity Prototype</h4>
+                        <p>We had to complete this prototype on a pretty tight deadline due to the accelerated pace of the class. Parinaz worked on the presentation we would give in class while Rachel and myself drilled away on different aspects of the design. Rachel worked on a user assessment, product descriptions, and how the ingredients list and reviews would be displayed. I worked on the onboarding, the user profile, and the main page. As we worked we would through ideas at each and share ideas on how to build out this prototype.</p> 
+
+                        <p>Check out the working Figma prototype here:</p>
+                        <div id="CS-centered">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="900px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FanJ9HO9xSh9EZDbsD7LRai%2FShel%3Fkind%3D%26node-id%3D8%253A0%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                        </div>
+                </div>
+    
+                <hr>
+                    <div class="phase5">
+                        <img src="image/shelCS/underwater_oranges.png" height="40%" width="40%">
+                        <div class="phase2-copy">
+                        <h2 id="list-item-6">PHASE 5: User Testing + Outcomes</h2>
+                        <p>We now had a functional prototype we could test. Unfortunately, we were running out of time to test before presenting our design. I was able to complete a couple more tests.</p>
+                        <h4>User Goal for Testing</h4>
+                        <p>Here are some tasks we had users complete in the app:</p>
+                        <ul>
+                            <li>Add products to a watch list</li>
+                            <li>Swap products out of a routine</li>
+                            <li>Complete your routine for the day</li>
+                        </ul>
+                        <h4>Results</h4>
+                        <p>Some findings from our tests</p>
+                        <ul>
+                            <li>Some buttons seem too small</li>
+                            <li>The user’s routine might be better as stacked blocks instead of two columns.</li>
+                            <li>The app could offer more guidance for setting up a routine</li>
+                        </ul>
+                    </div>
+                    </div>
+                <hr>
+                    <div class="phase6">
+                        <div class="CS-centered">
+                            <img src="/image/shelCS/Shel_Mockup_single.png" width="40%" height="40%" alt="Shël Mockup Single">
+                        </div>
+                        <h2 id="list-item-7">PHASE 6: Conclusion + Future Opportunities</h2>
+                        <h4>Conclusion</h4>
+                        <p>It was interesting to go through the design process as a group. We didn’t always agree on everything and it wasn’t always easy to move in the same direction together, but I think we did a pretty good job figuring it out. For the most part, it was nice to share the workload and figure out best how we can each contribute. I didn’t really expect to work on a skincare app, but I’m fairly happy with the prototype we created. I think this was good practice for the real world where I won’t always be able to pick my team or the nature of the product I’m working on.</p>
+                        <h4>Changes and Future Opportunites</h4>
+                        If I can find time, I’d like to make some changes to this app. Here’s a list of things I think should be updated.
+                        <ul>
+                            <li>I started modifying some of the prototype screens with more high-fidelity visuals, color, and product images. I’d like to update the prototype to be full color. You can see a few of those screens in the images below.</li>
+                            <li>I’d like to make the routine builder a little more straightforward I think it’s a little convoluted and I don’t think it’s a particularly good user experience at the moment.</li>
+                            <li>Experiment with a stacked routine layout instead of the two columns. I think this would allow the user to have more space to view their routines.</li>
+                            <li>I’d like to add more guidance to the routine building system. Testing showed that users found this part a little confusing.</li>
+                        </ul>
+                        <h1>Thank You For Reading!</h1>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
             <div class="socialMobile">
                 <a href="https://www.instagram.com/grant_creative/">
                     <img src="image/social_icons/instagram_icon.png" alt="Instagram Icon" width="30" height="30">
@@ -191,6 +432,9 @@ function closeNav() {
                     <img src="image/social_icons/mail_icon.png" alto="Send email to Grant Ertl" width="30" height="30">
                 </a>
                 </div>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+                <!-- JavaScript Bundle with Popper -->
+
+
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
                 <script src="scripts/lightbox-plus-jquery.js"></script>
             </body>
